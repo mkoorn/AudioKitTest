@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioKit
 
 class ViewController: UIViewController {
 
@@ -21,5 +22,25 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func loadAndPLaypressed(_ sender: Any) {
+        
+        if let audioFileUrl = Bundle.main.url(forResource: "beat 100bpm", withExtension: "mp3") {
+         
+            do {
+            
+                let audioFile = try AKAudioFile(forReading: audioFileUrl)
+                let player = try AKAudioPlayer(file: audioFile) {
+                    print("completion callback has been triggered !")
+                }
+                
+                AudioKit.output = player
+                AudioKit.start()
+                player.play()
+                
+            } catch {
+                NSLog("\(error)")
+            }
+        }
+    }
 }
 
