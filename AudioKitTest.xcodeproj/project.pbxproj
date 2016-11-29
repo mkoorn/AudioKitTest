@@ -14,6 +14,7 @@
 		CC9F92DE1DEC167600C766FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9F92DC1DEC167600C766FE /* Main.storyboard */; };
 		CC9F92E01DEC167600C766FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9F92DF1DEC167600C766FE /* Assets.xcassets */; };
 		CC9F92E31DEC167600C766FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9F92E11DEC167600C766FE /* LaunchScreen.storyboard */; };
+		CCE7FE6F1DED953A0056EB38 /* beat4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CCE7FE6E1DED953A0056EB38 /* beat4.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CC9F92E21DEC167600C766FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC9F92E41DEC167600C766FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC9F92EA1DEC17BB00C766FE /* beat 100bpm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beat 100bpm.mp3"; sourceTree = "<group>"; };
+		CCE7FE6E1DED953A0056EB38 /* beat4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beat4.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				CC9F92EA1DEC17BB00C766FE /* beat 100bpm.mp3 */,
+				CCE7FE6E1DED953A0056EB38 /* beat4.mp3 */,
 				CC9F92D81DEC167600C766FE /* AppDelegate.swift */,
 				CC9F92DA1DEC167600C766FE /* ViewController.swift */,
 				CC9F92DC1DEC167600C766FE /* Main.storyboard */,
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE7FE6F1DED953A0056EB38 /* beat4.mp3 in Resources */,
 				CC9F92E31DEC167600C766FE /* LaunchScreen.storyboard in Resources */,
 				CC3099791DEC264100DEA20B /* beat 100bpm.mp3 in Resources */,
 				CC9F92E01DEC167600C766FE /* Assets.xcassets in Resources */,
@@ -344,6 +348,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PYSVANQAV7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/AudioKit/iOS\"/**",
+				);
 				INFOPLIST_FILE = AudioKitTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -359,6 +367,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PYSVANQAV7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/AudioKit/iOS\"/**",
+				);
 				INFOPLIST_FILE = AudioKitTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

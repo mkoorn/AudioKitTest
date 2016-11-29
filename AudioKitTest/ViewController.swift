@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
     @IBAction func loadAndPLaypressed(_ sender: Any) {
         
-        if let audioFileUrl = Bundle.main.url(forResource: "beat 100bpm", withExtension: "mp3") {
+        if let audioFileUrl = Bundle.main.url(forResource: "beat4", withExtension: "mp3") {
          
             do {
             
