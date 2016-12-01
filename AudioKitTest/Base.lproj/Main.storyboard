@@ -1,18 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lR7-jd-gaa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="k83-SF-Moj">
+            <objects>
+                <viewController id="o3A-W8-Fuu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0gT-5d-ILI"/>
+                        <viewControllerLayoutGuide type="bottom" id="7pE-Nz-3Ve"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bKc-tF-klC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a9-MN-Efz">
+                                <rect key="frame" x="158" y="252" width="58" height="30"/>
+                                <state key="normal" title="AudioKit"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="hrj-AR-kxP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBv-gi-ct6">
+                                <rect key="frame" x="138" y="334" width="99" height="30"/>
+                                <state key="normal" title="AVAudioPlayer"/>
+                                <connections>
+                                    <segue destination="ccC-Sl-czl" kind="show" id="AN3-oa-HyQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dBv-gi-ct6" firstAttribute="centerX" secondItem="bKc-tF-klC" secondAttribute="centerX" id="4Ky-GD-X5n"/>
+                            <constraint firstItem="0a9-MN-Efz" firstAttribute="centerX" secondItem="bKc-tF-klC" secondAttribute="centerX" id="U3u-M1-OV9"/>
+                            <constraint firstItem="dBv-gi-ct6" firstAttribute="top" secondItem="0a9-MN-Efz" secondAttribute="bottom" constant="52" id="ZgH-TB-zM8"/>
+                            <constraint firstItem="0a9-MN-Efz" firstAttribute="centerY" secondItem="bKc-tF-klC" secondAttribute="centerY" multiplier="0.8" id="zJq-SH-5e1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="s8S-xP-4oF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8C-L9-mtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="150.67466266866569"/>
+        </scene>
+        <!--AudioKit-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AudioKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AudioKitVC" customModule="AudioKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,8 +64,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEY-Mq-YfE">
-                                <rect key="frame" x="149.5" y="318.5" width="76" height="30"/>
-                                <state key="normal" title="load &amp; play"/>
+                                <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="loadAndPLaypressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgM-QO-dGe"/>
                                 </connections>
@@ -35,10 +77,61 @@
                             <constraint firstItem="fEY-Mq-YfE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rwI-HB-0kb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="AudioKit" id="GJa-xp-WpX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1231.2" y="-169.56521739130437"/>
+        </scene>
+        <!--AVAudioPlayer-->
+        <scene sceneID="i7P-N9-bBP">
+            <objects>
+                <viewController id="ccC-Sl-czl" customClass="AvAudioPlayerVC" customModule="AudioKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cwe-LA-Ojo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pkr-YV-5CY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qGt-rW-oh3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgO-rE-NUi">
+                                <rect key="frame" x="172" y="318.5" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="ccC-Sl-czl" eventType="touchUpInside" id="vws-S2-P0h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xgO-rE-NUi" firstAttribute="centerX" secondItem="qGt-rW-oh3" secondAttribute="centerX" id="CT3-lC-FoC"/>
+                            <constraint firstItem="xgO-rE-NUi" firstAttribute="centerY" secondItem="qGt-rW-oh3" secondAttribute="centerY" id="p4a-Us-nqB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AVAudioPlayer" id="bsG-fy-npM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOt-4G-YSE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1231.2" y="482.60869565217394"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dfw-B5-Kk8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lR7-jd-gaa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y1S-uD-CHr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o3A-W8-Fuu" kind="relationship" relationship="rootViewController" id="Ka7-rE-kLJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WdK-V1-Qd6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-815.20000000000005" y="150.67466266866569"/>
         </scene>
     </scenes>
 </document>

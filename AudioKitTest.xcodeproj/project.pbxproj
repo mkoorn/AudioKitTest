@@ -10,11 +10,13 @@
 		23DB10E92DC8C2E97BC19AEB /* Pods_AudioKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A57C063BC1A565E5D560C8 /* Pods_AudioKitTest.framework */; };
 		CC3099791DEC264100DEA20B /* beat 100bpm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC9F92EA1DEC17BB00C766FE /* beat 100bpm.mp3 */; };
 		CC9F92D91DEC167600C766FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9F92D81DEC167600C766FE /* AppDelegate.swift */; };
-		CC9F92DB1DEC167600C766FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9F92DA1DEC167600C766FE /* ViewController.swift */; };
+		CC9F92DB1DEC167600C766FE /* AudioKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9F92DA1DEC167600C766FE /* AudioKitVC.swift */; };
 		CC9F92DE1DEC167600C766FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9F92DC1DEC167600C766FE /* Main.storyboard */; };
 		CC9F92E01DEC167600C766FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9F92DF1DEC167600C766FE /* Assets.xcassets */; };
 		CC9F92E31DEC167600C766FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9F92E11DEC167600C766FE /* LaunchScreen.storyboard */; };
 		CCE7FE6F1DED953A0056EB38 /* beat4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CCE7FE6E1DED953A0056EB38 /* beat4.mp3 */; };
+		CCE7FE811DF0119E0056EB38 /* beat long.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CCE7FE801DF0119E0056EB38 /* beat long.mp3 */; };
+		CCE7FE831DF013390056EB38 /* AvAudioPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE7FE821DF013390056EB38 /* AvAudioPlayerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +25,15 @@
 		8579FEDB91FB992977F45BD7 /* Pods-AudioKitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioKitTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-AudioKitTest/Pods-AudioKitTest.release.xcconfig"; sourceTree = "<group>"; };
 		CC9F92D51DEC167600C766FE /* AudioKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9F92D81DEC167600C766FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC9F92DA1DEC167600C766FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC9F92DA1DEC167600C766FE /* AudioKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKitVC.swift; sourceTree = "<group>"; };
 		CC9F92DD1DEC167600C766FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC9F92DF1DEC167600C766FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC9F92E21DEC167600C766FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC9F92E41DEC167600C766FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC9F92EA1DEC17BB00C766FE /* beat 100bpm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beat 100bpm.mp3"; sourceTree = "<group>"; };
 		CCE7FE6E1DED953A0056EB38 /* beat4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beat4.mp3; sourceTree = "<group>"; };
+		CCE7FE801DF0119E0056EB38 /* beat long.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beat long.mp3"; sourceTree = "<group>"; };
+		CCE7FE821DF013390056EB38 /* AvAudioPlayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvAudioPlayerVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,16 +86,26 @@
 		CC9F92D71DEC167600C766FE /* AudioKitTest */ = {
 			isa = PBXGroup;
 			children = (
+				CCE7FE801DF0119E0056EB38 /* beat long.mp3 */,
 				CC9F92EA1DEC17BB00C766FE /* beat 100bpm.mp3 */,
 				CCE7FE6E1DED953A0056EB38 /* beat4.mp3 */,
 				CC9F92D81DEC167600C766FE /* AppDelegate.swift */,
-				CC9F92DA1DEC167600C766FE /* ViewController.swift */,
-				CC9F92DC1DEC167600C766FE /* Main.storyboard */,
+				CCE7FE841DF0136F0056EB38 /* Views */,
 				CC9F92DF1DEC167600C766FE /* Assets.xcassets */,
 				CC9F92E11DEC167600C766FE /* LaunchScreen.storyboard */,
 				CC9F92E41DEC167600C766FE /* Info.plist */,
 			);
 			path = AudioKitTest;
+			sourceTree = "<group>";
+		};
+		CCE7FE841DF0136F0056EB38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC9F92DC1DEC167600C766FE /* Main.storyboard */,
+				CC9F92DA1DEC167600C766FE /* AudioKitVC.swift */,
+				CCE7FE821DF013390056EB38 /* AvAudioPlayerVC.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCE7FE6F1DED953A0056EB38 /* beat4.mp3 in Resources */,
+				CCE7FE811DF0119E0056EB38 /* beat long.mp3 in Resources */,
 				CC9F92E31DEC167600C766FE /* LaunchScreen.storyboard in Resources */,
 				CC3099791DEC264100DEA20B /* beat 100bpm.mp3 in Resources */,
 				CC9F92E01DEC167600C766FE /* Assets.xcassets in Resources */,
@@ -220,8 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9F92DB1DEC167600C766FE /* ViewController.swift in Sources */,
+				CC9F92DB1DEC167600C766FE /* AudioKitVC.swift in Sources */,
 				CC9F92D91DEC167600C766FE /* AppDelegate.swift in Sources */,
+				CCE7FE831DF013390056EB38 /* AvAudioPlayerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

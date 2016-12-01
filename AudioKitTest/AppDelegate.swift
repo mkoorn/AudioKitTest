@@ -8,6 +8,8 @@
 
 import UIKit
 
+let songName = "beat long"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
